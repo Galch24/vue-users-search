@@ -1,4 +1,4 @@
-# vue-users-search2
+# vue-users-search
 
 ## Project setup
 ```
