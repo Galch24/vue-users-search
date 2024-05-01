@@ -49,7 +49,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .list-item {
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   cursor: pointer;
   &.selected-item {
     background-color: #e0e0e0;

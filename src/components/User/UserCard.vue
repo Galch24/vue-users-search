@@ -51,6 +51,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@import "/src/styles/variables/grid";
 .empty-message {
   position: absolute;
   top: 50%;
@@ -60,6 +61,7 @@ export default defineComponent({
 .user-card {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   font-size: 14px;
@@ -71,11 +73,17 @@ export default defineComponent({
   width: 50%;
   background-color: #fff;
   box-sizing: border-box;
-  padding-right: 43px;
+  margin-bottom: 20px;
   img {
     width: 100%;
     height: auto;
     max-height: 100%;
+  }
+  @media #{$media-md-up} {
+    padding-right: 43px;
+  }
+  @media #{$media-to-md} {
+    width: 100%;
   }
 }
 .item-name,
@@ -99,6 +107,9 @@ h3 {
   width: 50%;
   box-sizing: border-box;
   color: #76787d;
+  @media #{$media-to-md} {
+    width: 100%;
+  }
 }
 .item-field {
   margin-bottom: 14px;

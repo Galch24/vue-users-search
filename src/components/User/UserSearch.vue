@@ -70,7 +70,7 @@ h2 {
   margin: 0 0 17px;
 }
 .form-control {
-  margin-bottom: 33px;
+  margin-bottom: 31px;
 
   input[type="text"] {
     border-radius: 8px;
