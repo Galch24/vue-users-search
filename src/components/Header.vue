@@ -2,7 +2,9 @@
   <div class="header">
     <nav class="container nav">
       <div class="logo">
-        <img src="/images/logo.svg" alt="Жилфонд" />
+        <router-link to="/">
+          <img src="/images/logo.svg" alt="Жилфонд" />
+        </router-link>
       </div>
       <div class="header-menu">
         <div v-for="item in menu" :key="item.id" class="menu-item">
@@ -28,7 +30,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .header {
-  min-height: 100px; // 113px;
+  min-height: 100px;
 }
 .nav {
   display: flex;

@@ -17,7 +17,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .sidebar {
   width: 292px;
-  padding: 31px 30px 31px 22px;
+  padding: 31px 22px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }

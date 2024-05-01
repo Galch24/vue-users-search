@@ -12,7 +12,8 @@
     </div>
     <div class="search-items">
       <h2>Результаты</h2>
-      <user-list :list="users" @select-item="handleSelectUser" />
+      <loader v-if="isUsersLoading" />
+      <user-list v-else :list="users" @select-item="handleSelectUser" />
     </div>
   </div>
 </template>
@@ -22,16 +23,18 @@ import { defineComponent } from "vue";
 import UserList from "@/components/User/UserList.vue";
 import { mapActions, mapState } from "vuex";
 import { UserInterface } from "@/types/storeTypes";
+import Loader from "@/components/Loader.vue";
 
 // TODO скорректировать тип
 type TMapState = Partial<{
   users: (state: any) => any;
   selectedUser: (state: any) => UserInterface | null;
+  isUsersLoading: (state: any) => boolean;
 }>;
 
 export default defineComponent({
   name: "UserSearch",
-  components: { UserList },
+  components: { Loader, UserList },
   data() {
     return {
       placeholder: "Введите Id или имя",
@@ -42,6 +45,7 @@ export default defineComponent({
     ...mapState<any, TMapState>({
       users: (state) => state.user.users,
       selectedUser: (state) => state.user.selectedUser,
+      isUsersLoading: (state) => state.user.isUsersLoading,
     }),
   },
   methods: {
@@ -77,5 +81,13 @@ h2 {
     box-sizing: border-box;
     font-size: 14px;
   }
+}
+.search-items {
+  position: relative;
+  overflow-y: auto;
+  max-height: 500px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 0 10px;
 }
 </style>

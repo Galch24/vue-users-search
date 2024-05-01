@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <Header />
     <div class="main-container">
       <sidebar />
       <main-content />
@@ -10,7 +9,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Header from "@/components/Header.vue";
 import Sidebar from "@/components/Sidebar.vue";
 import MainContent from "@/components/MainContent.vue";
 
@@ -19,7 +17,6 @@ export default defineComponent({
   components: {
     MainContent,
     Sidebar,
-    Header,
   },
   data() {
     return {
