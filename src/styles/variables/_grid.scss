@@ -1,0 +1,70 @@
+// Grid
+// ====
+// Settings for grid project
+//
+// stylelint-disable indentation, number-no-trailing-zeros
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$breakpoints: (
+  xs: 1px,
+  xse: 375px,
+  sm: 768px,
+  md: 1025px,
+  lg: 1320px,
+  xl: 1480px
+);
+
+$containers-content: (
+  xs: 320px,
+  sm: 738px,
+  md: 976px,
+  lg: 1278px,
+  xl: 1440px
+);
+
+$grid-gutter-width: 15px;
+$container-grid-gutter: $grid-gutter-width * 2;
+
+$screen: "only screen";
+
+// DESKTOP
+$media-xl-up: "#{$screen} and (min-width:#{map-get($breakpoints, xl)})"; // only desktop 1480
+$media-lg: "#{$screen} and (min-width:#{map-get($breakpoints, lg)})"; // only desktop 1320+
+$media-lg-up: "#{$screen} and (min-width:#{map-get($breakpoints, lg)})"; // only desktop 1320+
+
+// TABLET
+$media-md: "#{$screen} and (min-width:#{map-get($breakpoints, md)}) and (max-width:#{map-get($breakpoints, lg) - 1})"; // only tablet 1025-1320
+
+$media-md-up: "#{$screen} and (min-width:#{map-get($breakpoints, md)})"; // tablet and large 1025+
+$media-to-lg: "#{$screen} and (max-width:#{map-get($breakpoints, lg) - 1})"; // tablet and small 1320-
+$media-to-md: "#{$screen} and (max-width:#{map-get($breakpoints, md) - 1})"; // tablet and small 1025-
+
+// TABLET-MD
+$media-sm-lg: "#{$screen} and (min-width:#{map-get($breakpoints, sm)}) and (max-width:#{map-get($breakpoints, lg) - 1})"; // only tablet-sm 768-1319
+
+// TABLET-SM
+$media-sm: "#{$screen} and (min-width:#{map-get($breakpoints, sm)}) and (max-width:#{map-get($breakpoints, md) - 1})"; // only tablet-sm 768-1025
+$media-tablet-md: "#{$screen} and (min-width:#{map-get($breakpoints, sm) + 1}) and (max-width:#{map-get($breakpoints, md) - 1})"; // only tablet-sm 769 < 1025
+
+$media-sm-up: "#{$screen} and (min-width:#{map-get($breakpoints, sm)})"; // tablet-sm and large 768+
+$media-to-sm: "#{$screen} and (max-width:#{map-get($breakpoints, sm) - 1})"; // tablet-sm and small 768-
+
+// MOBILE
+$media-xs: "#{$screen} and (max-width:#{map-get($breakpoints, sm) - 1})"; // only mobile 768-
+$media-xs-up: "#{$screen} and (min-width:#{map-get($breakpoints, xs)})"; // 1+
+
+// Grid columns
+// ------------
+// Set the width of the gutters.
+
+$grid-gutter-widths: (
+  xs: 10px,
+  sm: 30px,
+  md: 30px,
+  lg: 30px
+) !default;
+

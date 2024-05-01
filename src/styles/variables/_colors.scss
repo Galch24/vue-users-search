@@ -1,0 +1,226 @@
+// Colors
+// ======
+// @LandonSchropp's approach of naming color variables.
+// - http://davidwalsh.name/sass-color-variables-dont-suck
+// - http://www.color-blindness.com/color-name-hue/
+
+// General colors palette
+$colors: (
+  transparent: transparent,
+  white-smoke: #f2f2f2,
+  gainsboro: #e0e0e0,
+  silver: #bdbdbd,
+  gray: #828282,
+  gray2: #E0E0E0,
+  gray3: #F0F0F0,
+  suva-gray: #8e8e8e,
+  matterhorn: #4f4f4f,
+  burnt-sienna: #eb5757,
+  buccaneer: #755,
+  forest-green: #308c14,
+  puerto-rico: #4dba87,
+  mine-shaft: #333,
+  green-grass: #8BBA62,
+  dark-grass: #00524C,
+  b2c-blue:  #D5EFFE,
+  // RSHB
+
+  // primary
+  green1: #248341,
+  green2: #42AB44,
+  green3: #245F34,
+  green4: #65C567,
+  green5: #00524C,
+  green6: #51B253,
+  green7: #D6F0D6,
+  green8: #f0f8f0,
+  orange: #FF881B,
+  red: #F23030,
+  black: #1c1c1c,
+  white: #FFFFFF,
+  yellow: #FFCB05,
+  yellow2: #FAD30A,
+
+  // secondary
+  blue-light: #E5F1FF,
+  blue-light2: #CAE8FB,
+  blue-light3: #AFDAFD,
+  green-light: #E2F6E2,
+  orange-light: #FDF1E5,
+  red-light: #FFECEC,
+  red-light2: #FFE5CE,
+  red-light3: #FEC4C4,
+  gray-light: #D3D9E0,
+  gray-light1: #F5F7F9,
+  gray-light2: #E9E9E9,
+  gray-light3: #D5D5D5,
+  gray-light4: #C6D0DE,
+  gray-light5: #EBEFF3,
+  gray-light6: #DFE0E1,
+  gray-light7: #CED9E4,
+  gray-dark: #EAEDF1,
+  gray-dark2: #979797,
+  gray-dark3: #8D8D8D,
+  gray900: #585757,
+  gray800: #969696,
+  gray700: #EEEEEE,
+  gray650: #E1E1E1,
+  gray600: #F5F5F5,
+
+  // style
+  style-blue: #E1F3F7,
+  style-blue2: #C1E5ED,
+  style-blue3: #38ADC8,
+  style-blue4: #B3D6FF,
+  style-blue5: #2E7CD9,
+  style-blue6: #00A5FF,
+  style-blue7: #2F80ED,
+  style-blue8: #DFEDEF,
+  style-blue9: #2D9CDB,
+  style-blue10: #0000EE,
+  style-blue11: #1976d2,
+  style-blue12: #F5F6F8,
+  style-blue13: #D5E5F7,
+  style-blue14: #C3D9F1,
+  style-blue15: #E8EFF9,
+  style-blue16: #F4F7FB,
+  style-blue17: #09CAF7,
+  style-blue18: #CBE9FC,
+  style-blue19: #B3DCFD,
+  style-blue20: #A2CEFF,
+  style-blue21: #F2F8FF,
+  style-blue22: #1DCBE4,
+  style-orange: #FFC285,
+  style-orange3: #F2720C,
+  style-orange4: #F1C79B,
+  style-orange5: #FFF0E0,
+  style-orange6: #EAD31B,
+  style-green: #A8E5AA,
+  style-green2: #E3F2E3,
+  style-green3: #D7EFA5,
+  style-green4: #A6ECBA,
+  style-green5: #E8FFE8,
+  style-green6: #3D9A4D,
+  style-black: #333333,
+  style-black2: #000000,
+  style-black3: #464D5C,
+  style-black4: #404040,
+  style-black5: #B0B9C2,
+  style-gray: #828282,
+  style-gray2: #E0E0E0,
+  style-gray3: #D8D8D8,
+  style-gray4: #D9D9D9,
+  style-gray5: #bdbdbd,
+  style-gray6: #C4C4C4,
+  style-gray7: #EDEDED,
+  style-gray8: #F5F6FA,
+  style-gray9: #92929D,
+  style-gray10: #696974,
+  style-gray11: #CFD7E0,
+  style-gray12: #ECECEC,
+  style-gray13: #F7F7F7,
+  style-gray14: #E3EAF4,
+  style-gray15: #E7EBF1,
+  style-gray16: #DADADA,
+  style-gray17: #C1CEDA,
+  style-gray18: #DDDDDD,
+  style-gray19: #C3C5C6,
+  style-gray20: #E9EDF1,
+  style-gray21: #E6ECF1,
+  style-gray22:#EBEFF3,
+  style-gray23:#C9CACC,
+  style-gray24:#B0B1B2,
+  style-gray25:#7D7E7F,
+  style-gray26: #EAECEE,
+  style-gray27: #E8E8E8,
+  style-gray28: #C9CACC,
+  style-white: #FAFAFB,
+  style-white2: #F0FFED,
+  style-white3: #F4F4F4,
+  style-white4: #EEF5EF,
+  style-white5: #F0F4F9,
+  style-white6: #F6F7F9,
+  style-white7: #EAEAEA,
+  style-beige: #F8F8F8,
+  style-beige2: #F4ECD7,
+  style-red: #ff5252,
+  style-red2: #FFE7D9,
+  style-red3: #FFF8DE,
+  style-red4: #F0B9B9,
+  style-red5: #FFF5F5,
+  style-ping: #FFE7D1,
+  style-ping2: #FFDEDC,
+);
+
+// Theme generic colors
+// Key: name of color
+// Value: color value or map with default, hover, focus color values
+$colors-theme: (
+  primary: (
+    default: map-get($colors, matterhorn),
+    hover: map-get($colors, matterhorn)
+  ),
+  secondary: (
+    default: map-get($colors, gray),
+    hover: map-get($colors, matterhorn),
+  ),
+  accent: (
+    default: map-get($colors, matterhorn),
+    hover: map-get($colors, black),
+  ),
+  tertiary: map-get($colors, silver),
+  success: map-get($colors, puerto-rico),
+  warning: map-get($colors, buccaneer),
+  error: map-get($colors, burnt-sienna)
+);
+
+$colors-border: (
+  primary: map-get($colors, silver),
+  secondary: map-get($colors, gainsboro),
+);
+
+$colors-background: (
+  primary: (
+    default: map-get($colors, white),
+    hover: map-get($colors, silver)
+  ),
+  secondary: (
+    default: map-get($colors, white-smoke),
+    hover: map-get($colors, gainsboro)
+  ),
+  tertiary: map-get($colors, suva-gray)
+);
+
+$colors-gradient: (
+  first: #FAD30A,
+  second: #09CAF7,
+  third: #F5F5F5
+);
+
+$colors-unique: (
+  green-light: #ebfbea,
+  green101: #D0F7CC,
+  green102: #E1F4E1,
+  green103: #F7FADC,
+  green104: #EDF7ED,
+  green105: #E4F3E5,
+  green107: #CEEFC5,
+  green108: #D0F6CC,
+  green110: #31783E,
+  gray101: #E1E4E7,
+  gray11: rgba(0, 0, 0, 0.1),
+  gray12: rgba(28, 28, 28, 0.2),
+  gray15: rgba(150, 150, 150, 0.5),
+  gray17: rgba(0, 0, 0, 0.07),
+  gray18: rgba(0,0,0,0.7),
+  gray102: #F5F7F9,
+  gray103: #f1f1f3,
+  gray105: #f9fafc,
+  gray107: #C9CACC,
+  blue101: #C1ECEC,
+  blue102: #E6F7F7,
+  blue103: #D2EFEF,
+  blue105: #E8F4FF,
+  blue107: #D0EDFF,
+  orange101: #F9E5C2
+)

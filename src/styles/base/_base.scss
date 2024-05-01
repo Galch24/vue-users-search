@@ -1,0 +1,78 @@
+
+@import "../variables/typography";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: overlay;
+  @-moz-document url-prefix() {
+    overflow-y: auto;
+    margin-right: calc(100% - 100vw);
+  }
+}
+
+a {
+  color: #2E7CD9;
+  position: relative;
+}
+
+p {
+  .no-indent & {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+#app {
+  @extend %ff-primary;
+  overflow-x: hidden;
+}
+
+#viewport {
+  overflow: hidden;
+  height: 100%;
+}
+
+.default-layout {
+  height: 100%;
+
+  #viewport {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-content {
+    flex: 1 0;
+  }
+
+  .header,
+  .footer {
+    flex: 0 0 auto;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+.list-unstyled {
+  list-style: none;
+}
+.v-middle {
+  vertical-align: middle;
+}
+
+.inline-block {
+  display: inline-block;
+}
+.wrap-xs {
+  flex-wrap: wrap;
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.muted {
+  color: #76787D;
+}

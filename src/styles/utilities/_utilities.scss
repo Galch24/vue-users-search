@@ -1,0 +1,27 @@
+.no-outline {
+  outline: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-underline:hover:after {
+  height: 0;
+}
+
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+@media (hover: none) {
+  a:not(.no-underline):after {
+    display: none;
+  }
+}
