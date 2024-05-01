@@ -4,7 +4,9 @@
       v-for="item in list"
       :key="item.id"
       :user="item"
-      class="item-list"
+      class="list-item"
+      :class="{ 'selected-item': selectedUser && selectedUser.id === item.id }"
+      @click="selectUser(item)"
     />
   </div>
   <div v-else>
@@ -15,6 +17,13 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import UserItem from "@/components/User/UserItem.vue";
+import { mapState } from "vuex";
+import { UserInterface } from "@/types/storeTypes";
+
+// TODO скорректировать тип
+type TMapState = Partial<{
+  selectedUser: (state: any) => UserInterface | null;
+}>;
 
 export default defineComponent({
   name: "UserList",
@@ -25,11 +34,25 @@ export default defineComponent({
       default: () => [],
     },
   },
+  computed: {
+    ...mapState<any, TMapState>({
+      selectedUser: (state) => state.user.selectedUser,
+    }),
+  },
+  methods: {
+    selectUser(user) {
+      this.$emit("select-item", user);
+    },
+  },
 });
 </script>
 
 <style scoped lang="scss">
-.item-list {
-  margin-bottom: 15px;
+.list-item {
+  margin-bottom: 18px;
+  cursor: pointer;
+  &.selected-item {
+    background-color: #e0e0e0;
+  }
 }
 </style>

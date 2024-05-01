@@ -1,16 +1,16 @@
 <template>
   <div class="main">
-    <div class="empty-message">
-      Выберите сотрудника, чтобы посмотреть его профиль
-    </div>
+    <user-card />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import UserCard from "@/components/User/UserCard.vue";
 
 export default defineComponent({
   name: "MainContent",
+  components: { UserCard },
   data() {
     return {};
   },
@@ -20,12 +20,8 @@ export default defineComponent({
 <style scoped lang="scss">
 .main {
   position: relative;
-  width: calc(100% - 300px);
-}
-.empty-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: calc(100% - 292px);
+  padding: 32px 20px;
+  box-sizing: border-box;
 }
 </style>

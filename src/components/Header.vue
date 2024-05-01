@@ -1,8 +1,14 @@
 <template>
   <div class="header">
-    <nav class="container">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <nav class="container nav">
+      <div class="logo">
+        <img src="/images/logo.svg" alt="Жилфонд" />
+      </div>
+      <div class="header-menu">
+        <div v-for="item in menu" :key="item.id" class="menu-item">
+          {{ item.label }}
+        </div>
+      </div>
     </nav>
   </div>
 </template>
@@ -12,8 +18,27 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Header",
+  data() {
+    return {
+      menu: [{ label: "Пользователь", id: 1 }],
+    };
+  },
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.header {
+  min-height: 100px; // 113px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.logo {
+  padding-top: 37px;
+}
+.header-menu {
+  padding-top: 32px;
+}
+</style>
